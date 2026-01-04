@@ -1,0 +1,20 @@
+{
+  "base_model_name_or_path": "facebook/opt-350m", #base model to apply LoRA to
+  "bias": "none",
+  "fan_in_fan_out": false,
+  "inference_mode": true,
+  "init_lora_weights": true,
+  "layers_pattern": null,
+  "layers_to_transform": null,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "modules_to_save": null,
+  "peft_type": "LORA", #PEFT method type
+  "r": 16,
+  "revision": null,
+  "target_modules": [
+    "q_proj", #model modules to apply LoRA to (query and value projection layers)
+    "v_proj"
+  ],
+  "task_type": "CAUSAL_LM" #type of task to train model on
+}
